@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+
+
+        body{
+            padding: 100px;
+            height: 100px;
+            width: auto;
+        }
+        html{
+            background-color:wheat;
+        }
+        
+        .cotainer{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;   
+            flex-direction: column;
+        }
+        
+        ul {
+            list-style-type: none; /* Remove os pontos padrão da lista */
+            padding: 0;
+        }
+        
+        li {
+            margin: 5px 0; /* Ajuste a margem para garantir que os itens fiquem mais próximos */
+            display: flex; /* Faz os itens da lista usarem flexbox */
+            align-items: center; /* Alinha os itens centralizados verticalmente */
+            background-color: aquamarine;
+            border-radius: 20px;
+            border: 2px solid;
+            
+        }
+        li:hover {
+            background: yellow;
+
+        }
+        li :visited{
+            color: red;
+
+        }
+        
+        li::before {
+            content: "•"; /* Adiciona um ponto antes dos itens da lista */
+            margin-right: 8px; /* Espaçamento entre o ponto e o link */
+        }
+
+        #Principal{
+            background-color: red;
+            width: 250px;
+            text-align: center;
+            justify-content: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #formulario{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            flex-direction: column;
+            width: 260px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 5px;
+            border: 4px solid;
+            background-color: rgb(26, 160, 158);
+
+        }
+        hr{
+            width: 260px;
+            border: 2px solid;
+            margin: 5px;
+   
+        }
+         .segundario {
+            margin: 8px;
+         }
+
+         input{
+            height:20px;
+            margin:3px;
+            border-radius: 1px;
+            border: 2px solid;
+        
+         }
+         label{
+            display: flex;
+            text-align: right;
+            margin-left: -130px;
+            width: 30px; /* Tamanho fixo para alinhar todos os labels */
+            margin-right: 10px;
+         }
+         button{
+            margin-right: 6px;
+            padding: 3px;
+            margin: 7px;
+            border: solid 2px;
+            cursor: pointer;
+            
+         }
+         
+         
+  
+    </style>
+
+</head>
+<body>
+   
+    <div>
+        
+        <form id="formulario">
+            <h1 class="segundario">Tela de Cadastro</h1>
+            <hr>
+            <label for="Nome">*Nome</label>
+            <input type="text" name="Nome" id="Nome" placeholder="Digite seu nome"required><br>
+            
+            <label for="Email">*Email</label>
+            <input type="text" name="Email" id="Email " placeholder="Crie um email"required><br>
+            
+            <label for="CPF">*CPF</label>
+            <input type="text" name="cpf" id="CPF" maxlength="14" required oninput="formatarCPF(this)"placeholder="Digite seu CPF"required><br>
+            
+            
+            <label for="Senha">*Senha</label>
+            <input type="password" name="Senha" id="Senha" placeholder="Crie uma senha"required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+              <script>
+                function formatarCPF(input) {
+                    // Remove tudo que não for número
+                    let cpf = input.value.replace(/\D/g, '');
+                  
+                    // Formata o CPF no padrão XXX.XXX.XXX-XX
+                    if (cpf.length > 3) {
+                      cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+                    }
+                    if (cpf.length > 6) {
+                      cpf = cpf.replace(/(\d{3})(\d)/, '$1.$2');
+                    }
+                    if (cpf.length > 9) {
+                      cpf = cpf.replace(/(\d{3})(\d{1,2})$/, '$1-$2');
+                    }
+                  
+                    // Atualiza o valor no campo
+                    input.value = cpf;
+                  }
+                  
+              </script>
+    <div class="cotainer">
+       
+        <ul>         
+            <li><a href="https://youtube.com.br" target ="blank">YouTube</a> - Acesse o YouTube</li>
+            <li><a href="https://Instagram.com.br" target ="blank">Instagram</a> - Acesse o Instagram</li>
+            <li><a href="https://facebook.com.br" target ="blank">Facebook</a> - Entre no meu Facebook</li>
+            <li><a href="https://linkedin.com" target ="blank" >LinkedIn</a> - Acesse meu LinkedIn</li>        
+        </ul>  
+    
+        </div>
+
+        <footer>
+            <p></p>
+        </footer>
+</body>
+</html>
