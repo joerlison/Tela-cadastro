@@ -22,9 +22,4 @@ O objetivo deste projeto é criar uma interface visual de cadastro, separando a 
 
 Você pode acessar a demonstração da tela visual através do GitHub Pages (se configurado):
 [https://joerlison.github.io/Tela-cadastro](https://joerlison.github.io/Tela-cadastro)
-
-
-
-
-
-Você pode copiar e personalizar o texto acima conforme desejar. Depois de criar e salvar o arquivo `README.md`, siga os passos do Git para adicioná-lo ao repositório, como mencionei anteriormente. Me avisa como ficou! 🚀✨
+! 🚀✨
